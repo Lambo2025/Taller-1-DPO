@@ -10,6 +10,7 @@ import java.util.Map;
 
 import uniandes.dpoo.taller0.modelo.Atleta;
 import uniandes.dpoo.taller0.modelo.Genero;
+import uniandes.dpoo.taller0.modelo.Pais;
 import uniandes.dpoo.taller0.procesamiento.CalculadoraEstadisticas;
 import uniandes.dpoo.taller0.procesamiento.LoaderOlimpicos;
 
@@ -63,7 +64,7 @@ public class ConsolaOlimpicos
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
 				else if (opcion_seleccionada == 13 && calculadora != null)
-					ejecutarPorcentajeMedallistas();
+					ejecutarPaísDeAtletaSeleccionado();
 				else if (opcion_seleccionada == 14)
 					
 				{
@@ -271,6 +272,14 @@ public class ConsolaOlimpicos
 			System.out.println("" + num + ". - " + atleta.darNombre());
 			num++;
 		}
+	}
+	private void ejecutarPaísDeAtletaSeleccionado()
+	{
+		System.out.println("\n" + "País del atleta ingresado" + "\n");
+		String atleta = input("Ingrese el nombre del atleta: ");
+		Atleta Paises = calculadora.buscarPaisAtleta(atleta);
+		System.out.println("Los país del atleta seleccionado es: " + Paises);
+		
 	}
 
 	/**

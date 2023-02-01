@@ -157,4 +157,9 @@ public class Pais
 		}
 		return resultado;
 	}
+
+	public Object darPais() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

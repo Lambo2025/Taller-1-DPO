@@ -443,5 +443,16 @@ public class CalculadoraEstadisticas
 
 		return nombres;
 	}
+	
+	public Atleta buscarPaisAtleta(String nombreAtleta)
+	{
+		Atleta elPais = null;
+		for (int i = 0; i < paises.size() && elPais == null; i++)
+		{
+			if(paises.get(i).darPais().equals(nombreAtleta))
+				elPais = paises.get(i);
+		}
+		return elPais;
+	}
 
 }
